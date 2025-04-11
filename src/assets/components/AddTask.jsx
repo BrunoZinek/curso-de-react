@@ -6,7 +6,7 @@ function AddTask({ onAddTaskSubmit }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   return (
-    <div className="space-y-4 p-6 bg-slate-200 rounded-md shadow-md">
+    <div className="text-center space-y-4 p-6 bg-slate-200 rounded-md shadow-md">
       <Input
         type="text"
         placeholder="Título da tarefa"
@@ -20,6 +20,7 @@ function AddTask({ onAddTaskSubmit }) {
         onChange={(e) => setDescription(e.target.value)}
       />
       <Button
+        type="button"
         onClick={() => {
           if (!title.trim() || !description.trim()) {
             alert("Por favor, preencha todos os campos");
